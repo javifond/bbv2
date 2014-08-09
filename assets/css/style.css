@@ -2,8 +2,17 @@
    Base Styles, Bootstrap Modifications & Fonts Import
    ========================================================================== */
 
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@font-face {
+    font-family: bb;
+    src: url(../../assets/fonts/bb.ttf);
+}
 
+@font-face {
+    font-family: bb2;
+    src: url(../../assets/fonts/bb2.ttf);
+}
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 
 ::-moz-selection {
     background: #f2c2c9;
@@ -35,12 +44,10 @@
 }
 
 .mt {
-	margin-top: 80px;
+	margin-top: 60px;
 }
 
-.mb {
-	margin-bottom: 80px;
-}
+
 
 /* ==========================================================================
    General styles
@@ -48,7 +55,7 @@
 
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 16px;
 
@@ -63,11 +70,13 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .navbar-brand {
-	font-weight: 700;
+    font-family: 'bb', sans-serif;
+    font-size: 30px;
+    margin-top: 20px;
 }
 
 .navbar-default .navbar-brand {
-	color: #1abc9c;
+	color: #2e2096;
 }
 
 .navbar-default {
@@ -82,7 +91,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-default .navbar-nav > li > a {
-	color: #1abc9c;
+	color: #2e2096;
+    font-family: 'bb2', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
 }
 
 /* ==========================================================================
@@ -96,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
 	text-align:center;
 	background-attachment: relative;
 	background-position: center center;
-	min-height: 650px;
+	min-height: 750px;
 	width: 100%;
 	
     -webkit-background-size: 100%;
@@ -125,9 +137,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #social {
-	padding-top: 50px;
-	padding-bottom: 50px;
-	background-color: #f2f2f2;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: #fff;
 }
 
 #social i {
@@ -136,17 +148,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #social i:hover {
-	color: #1abc9c
+	color: rgb(38, 142, 17)
 }
 
 #footerwrap {
-	padding-top: 70px;
+	padding-top: 50px;
 	padding-bottom: 50px;
-	background-color: #2f2f2f;
+	background-color: rgba(4, 29, 55, 0.9);
 }
 
 #footerwrap p {
-	color: #f2f2f2;
+	color: #ffffff;
 	margin-left: 10px;
 }
 
@@ -206,11 +218,18 @@ h1, h2, h3, h4, h5, h6 {
     background-size: cover;
 }
 
-/* Gallery */
-.gallery {
-	margin-top: 30px;
+.headermessage {
+    font-family: bb
 }
 
-.gallery img:hover {
-	opacity: 0.4;
+.headermessage h4 {
+    font-size: 44px;
+}
+
+#showroom{
+    background-color: #fff;
+}
+#showroom h1{
+    font-family: bb2;
+    font-size: 65px;
 }
