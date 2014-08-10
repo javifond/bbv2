@@ -347,7 +347,7 @@ var Grid = (function() {
 			this.$href = $( '<a href="#">Ver detalles</a>' );
 			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
 			this.$loading = $( '<div class="og-loading"></div>' );
-			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
+			this.$fullimage = $( '<div class="og-fullimg og-background"></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );
 			this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
 			this.$previewEl = $( '<div class="og-expander"></div>' ).append( this.$previewInner );
@@ -400,13 +400,16 @@ var Grid = (function() {
 			// for smaller screens we don´t display the large image (the media query will hide the fullimage wrapper)
 			if( self.$fullimage.is( ':visible' ) ) {
 				this.$loading.show();
-				$( '<img/>' ).load( function() {
-					var $img = $( this );
+                $( '<img/>' ).load( function() {
+					var $img = $( this ),
+                        imageUrl;
 					if( $img.attr( 'src' ) === self.$item.children('a').data( 'largesrc' ) ) {
 						self.$loading.hide();
 						self.$fullimage.find( 'img' ).remove();
 						self.$largeImg = $img.fadeIn( 350 );
-						self.$fullimage.append( self.$largeImg );
+                        imageUrl = self.$largeImg.attr('src');
+                        self.$fullimage.css('background-image', 'url(' + imageUrl + ')');
+                        //self.$fullimage.append( self.$largeImg.fadeOut ( 200 ) );
 					}
 				} ).attr( 'src', eldata.largesrc );	
 			}
