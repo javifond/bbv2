@@ -28,7 +28,7 @@
 	width: 0;
 	position: absolute;
 	pointer-events: none;
-	border-bottom-color: #dda;
+	border-bottom-color: rgba(185, 185, 77, 0.1);
 	border-width: 15px;
 	left: 50%;
 	margin: -20px 0 0 -15px;
@@ -36,7 +36,7 @@
 
 .og-expander {
 	position: absolute;
-	background: #dda;
+	background: rgba(185, 185, 77, 0.1);
 	top: auto;
 	left: 0;
 	width: 100%;
@@ -157,6 +157,15 @@
 	-moz-animation: loader 0.5s infinite ease-in-out both;
 	animation: loader 0.5s infinite ease-in-out both;
 }
+
+.og-background {
+    background-color: #fff;
+	background-position: center top;
+	background-repeat: no-repeat;
+	-webkit-background-size: auto 100%;
+	-moz-background-size: auto 100%;
+	box-shadow: inset 0 0 0 999px rgba(185, 185, 77, 0.1);
+} 
 
 @-webkit-keyframes loader {
 	0% { background: #ddd; }
