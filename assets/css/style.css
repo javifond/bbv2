@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Base Styles, Bootstrap Modifications & Fonts Import
-   ========================================================================== */
+Base Styles, Bootstrap Modifications & Fonts Import
+========================================================================== */
 
 @font-face {
     font-family: bb;
@@ -27,10 +27,10 @@
 }
 
 /*
- * A better looking default horizontal rule
- */
+* A better looking default horizontal rule
+*/
 
- hr {
+hr {
     display: block;
     height: 1px;
     border: 0;
@@ -40,19 +40,23 @@
 }
 
 .centered {
-	text-align: center
+    text-align: center
 }
 
 .mt {
-	margin-top: 60px;
+    margin: 1em 0;
+    margin-top: 50px;
 }
 
 
 
 /* ==========================================================================
-   General styles
-   ========================================================================== */
-
+General styles
+========================================================================== */
+html {
+    width: 100%;
+    height: 100%;
+}
 
 body {
     font-family: 'Lato', sans-serif;
@@ -64,53 +68,137 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: 700;
+    font-weight: 700;
     color: #4a4a4a;
 }
 
+.navbar {
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: #000;
+}
 
 .navbar-brand {
     font-family: 'bb', sans-serif;
     font-size: 30px;
-    margin-top: 20px;
+}
+
+.navbar-brand:focus {
+    outline: 0;
+}
+
+.navbar-custom a {
+    color: #fff;
 }
 
 .navbar-default .navbar-brand {
-	color: #2e2096;
+    color: #2e2096;
 }
 
 .navbar-default {
-	background-color: transparent;
-	border-color: transparent;
+    background-color: transparent;
+    border-color: transparent;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	color: #1abc9c;
-	background-color: transparent;
-	border-bottom: 2px solid #1abc9c
+    color: #1abc9c;
+    background-color: transparent;
+    border-bottom: 2px solid #1abc9c
 }
 
 .navbar-default .navbar-nav > li > a {
-	color: #2e2096;
+    color: #2e2096;
     font-family: 'bb2', sans-serif;
     font-size: 22px;
     font-weight: 700;
 }
 
+.navbar-custom .nav li a {
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li.active {
+    outline: 0;
+    background-color: rgba(255,255,255,.2);
+}
+
+.navbar-toggle {
+    padding: 4px 6px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.navbar-toggle:focus,
+.navbar-toggle:active {
+    outline: 0;
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        border-bottom: 0;
+        letter-spacing: 1px;
+        background: 0 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+        background-color: rgb(15, 48, 88);
+    }
+
+    .navbar-custom.top-nav-collapse {
+        border-bottom: 1px solid rgba(255,255,255,.3);
+    }
+}
+.brand-heading {
+    font-size: 40px;
+}
+
+@media(min-width:767px) {
+
+    .brand-heading {
+        font-size: 100px;
+    }
+}
+
+.page-scroll i.animated {
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 1s;
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-transition-property: -moz-transform;
+    -moz-transition-duration: 1s;
+    -moz-animation-name: pulse;
+    -moz-animation-duration: 1.5s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+}
+
 /* ==========================================================================
-   Wrap Sections
-   ========================================================================== */
+Wrap Sections
+========================================================================== */
 
 #headerwrap {
-	background: url(../img/back.jpg) no-repeat center top;
-	margin-top: -70px;
-	padding-top: 250px;
-	text-align:center;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 750px;
-	width: 100%;
-	
+    background: url(../img/back.jpg) no-repeat center top;
+    margin-top: -70px;
+    padding-top: 250px;
+    text-align:center;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 750px;
+    width: 100%;
+
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -123,55 +211,55 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #headerwrap h1 {
-	color:#ffffff;
-	padding-top: 10px;
-	padding-bottom: 20px;
-	letter-spacing: 4px;
-	font-size: 80px;
-	font-weight: bold;
+    color:#ffffff;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    letter-spacing: 4px;
+    font-size: 80px;
+    font-weight: bold;
 }
 
 #headerwrap h4 {
-	font-weight: 400;
-	color: #ffffff
+    font-weight: 400;
+    color: #ffffff
 }
 
 #social {
-	padding-top: 15px;
-	padding-bottom: 15px;
-	background-color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #fff;
 }
 
 #social i {
-	font-size: 40px;
-	color: #4a4a4a
+    font-size: 40px;
+    color: #4a4a4a
 }
 
 #social i:hover {
-	color: rgb(38, 142, 17)
+    color: rgb(38, 142, 17)
 }
 
 #footerwrap {
-	padding-top: 50px;
-	padding-bottom: 50px;
-	background-color: rgba(4, 29, 55, 0.9);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgb(15, 48, 88);
 }
 
 #footerwrap p {
-	color: #ffffff;
-	margin-left: 10px;
+    color: #ffffff;
+    margin-left: 10px;
 }
 
 #workwrap {	
-	background: url(../img/work.jpg) no-repeat center top;
-	margin-top: -70px;
-	padding-top: 250px;
-	text-align:center;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 650px;
-	width: 100%;
-	
+    background: url(../img/work.jpg) no-repeat center top;
+    margin-top: -70px;
+    padding-top: 250px;
+    text-align:center;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 650px;
+    width: 100%;
+
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -184,29 +272,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #workwrap h1 {
-	color:#ffffff;
-	padding-top: 10px;
-	padding-bottom: 20px;
-	letter-spacing: 4px;
-	font-size: 80px;
-	font-weight: bold;
+    color:#ffffff;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    letter-spacing: 4px;
+    font-size: 80px;
+    font-weight: bold;
 }
 
 #workwrap h4 {
-	font-weight: 400;
-	color: #ffffff
+    font-weight: 400;
+    color: #ffffff
 }
 
 #aboutwrap {	
-	background: url(../img/about.jpg) no-repeat center top;
-	margin-top: -70px;
-	padding-top: 250px;
-	text-align:center;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 550px;
-	width: 100%;
-	
+    background: url(../img/about.jpg) no-repeat center top;
+    margin-top: -70px;
+    padding-top: 250px;
+    text-align:center;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 550px;
+    width: 100%;
+
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -218,18 +306,60 @@ h1, h2, h3, h4, h5, h6 {
     background-size: cover;
 }
 
-.headermessage {
-    font-family: bb
+.headermessage h1, .headermessage h4{
+    font-family: bb;
 }
 
 .headermessage h4 {
     font-size: 44px;
 }
 
-#showroom{
+#showroom {
     background-color: #fff;
 }
-#showroom h1{
+#showroom h1,  #showroom span {
     font-family: bb2;
-    font-size: 65px;
+    font-size: 50px;
+    color: rgb(15, 48, 88);
+}
+#showroom span {
+    font-size: 30px;
+}
+
+/* ==========================================================================
+Key Frames
+========================================================================== */
+
+@-webkit-keyframes pulse {
+    0 {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-moz-keyframes pulse {
+    0 {
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -moz-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
 }

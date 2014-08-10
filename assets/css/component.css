@@ -8,9 +8,8 @@
 
 .og-grid li {
 	display: inline-block;
-	margin: 20px 100px 0 10px;
 	vertical-align: top;
-	height: 250px;
+	height: 500px;
 }
 
 .og-grid li > a,
