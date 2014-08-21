@@ -230,11 +230,23 @@ Wrap Sections
 
 #social i {
     font-size: 40px;
-    color: #4a4a4a
+    color: #4a4a4a;
 }
 
-#social i:hover {
-    color: rgb(15, 48, 88);
+.fb:hover {
+    color: #46629e !important;
+}
+
+.tw:hover {
+    color: #55acee !important; 
+}
+
+.yt:hover {
+    color: #dc2725 !important;
+}
+
+.mail:hover {
+    color: #0f3058 !important;
 }
 
 #footerwrap {
