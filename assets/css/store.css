@@ -98,7 +98,6 @@ h1, h2, h3, h4, h5, h6 {
 .side-pics {
     display: inline-block;
     position: absolute;
-    top: 25%;
 }
 
 .side-pics a {
@@ -120,7 +119,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .og-details {
     font-family: bb2;
-    font-size: 50px;
     color: rgb(15, 48, 88);
 }
 
@@ -135,38 +133,60 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 24px;
 }
 
-.og-details a {
-    font-weight: 700;
-    font-size: 16px;
-    color: rgb(15, 48, 88);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 10px 20px;
-    border: 3px solid rgb(15, 48, 88);
-    display: inline-block;
-    outline: none;
-}
-
-.og-details a::before {
-    content: '\2192';
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.og-details a:hover {
-    border-color: #999;
-    color: #999;
-}
-
 .price {
     float: left;
     width: 120px;
-    height: 80px;
+    height: 90px;
     padding: 4px;
     text-align: center;
     color: #fff;
     background: #f7cfc6;
     background: rgba(247,197,185,0.8);
     font-size: 55px !important;
-    margin-right: 20px;
+    margin-right: 22px;
+    margin-top: 5px;
+    border-radius: 4px;
+}
+
+.form-control{
+    width: auto;
+    height: 50px;
+    font-size: 21px;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.payment .btn {
+    padding: 9px 25px;
+    font-size: 21px;
+}
+
+.cart {
+    font-size: 18px !important;
+}
+
+.minicart-empty-text {
+    margin: 40px;
+}
+
+.minicart-item a {
+    position: relative !important;
+    top: 0 !important;
+}
+
+.minicart-attributes {
+    margin: 0 !important;
+}
+
+.minicart-quantity {
+    text-align: center !important;
+}
+
+.minicart-remove {
+    top: 5px !important;
+    left: 280px !important;
+}
+
+.minicart-price {
+    top: 5px !important;
 }
