@@ -207,18 +207,33 @@ Wrap Sections
     background-size: cover;
 }
 
-#headerwrap h1 {
+.headermessage h1 {
+    font-family: bb;
     color:#ffffff;
-    padding-top: 10px;
-    padding-bottom: 20px;
     letter-spacing: 4px;
     font-size: 80px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
-#headerwrap h4 {
+.headermessage h4{
+    font-family: bb;
+    color: #ffffff;
+    font-size: 44px;
     font-weight: 400;
-    color: #ffffff
+}
+
+@media screen and (max-width: 740px) {
+
+	#headerwrap h1 {
+        padding: 0;
+        margin-top: 25%;
+        font-size: 28px;
+    }
+
+    .headermessage h4 {
+        font-size: 24px;
+    }
+
 }
 
 #social {
@@ -260,14 +275,6 @@ Wrap Sections
     font-size: 14px;
 }
 
-.headermessage h1, .headermessage h4{
-    font-family: bb;
-}
-
-.headermessage h4 {
-    font-size: 44px;
-}
-
 #showroom {
     background-color: #fff;
 }
@@ -278,6 +285,14 @@ Wrap Sections
 }
 #showroom span {
     font-size: 30px;
+}
+
+@media screen and (max-width: 740px) {
+
+	#showroom span {
+        font-size: 24px;
+    }
+
 }
 
 #showroom hr {

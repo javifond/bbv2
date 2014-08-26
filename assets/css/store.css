@@ -105,6 +105,16 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 10px;
 }
 
+@media(max-width:420px) {
+    .gallery {
+      text-align: center;
+    }
+
+    .gallery div:nth-child(2) {
+        display: none;
+    }
+}
+
 #footerwrap {
     background-color: #0f3058;
     padding-top: 30px;
@@ -146,6 +156,13 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 22px;
     margin-top: 5px;
     border-radius: 4px;
+}
+
+@media(max-width:500px) {
+
+    .price {
+        float: none;
+    }
 }
 
 .form-control{
@@ -197,6 +214,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .modal-header h4 {
     color: #fff;
+}
+
+.navbar-default .navbar-toggle {
+  color: #fff;
+  border-color: transparent;
 }
 
 /* Wobble Vertical */
